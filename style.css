@@ -1,0 +1,89 @@
+
+.clear {
+	margin-top: -1px;
+	height: 1px;
+	clear:both;
+	zoom: 1;
+}		
+
+.slider {
+
+	width: 1000px;
+	margin: 50px auto;
+	padding: 0 30px;
+	position: relative;
+	height:100%;
+}
+/* Двойной клик по кнопкам вперед/назад вызывает выделение всех элементов слайдера,
+поэтому предотвращаем это */
+.slider::-moz-selection { background: transparent; color: #fff; text-shadow: none; }
+.slider::selection { background: transparent; color: #fff; text-shadow: none; }
+
+.slide-list {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	
+}
+.slide-wrap {
+	position: relative;
+	left: 0px;
+	top: 0;
+	/* максимально возможная ширина обертки слайдера */
+	width: 100%;
+	height: 100%;
+	min-height: 1050px;
+	overflow: hidden;
+}
+.slide-item.first-slide {
+	display:block;
+}
+.slide-item {
+	display: none;
+	width: 1000px;
+	padding:0 0;
+	position: absolute;
+}
+.slide-title {
+	/* Шрифт */
+	font: bold 16px monospace;
+	/* Указываем, что элемент блочный */
+	display: block;
+}
+
+
+
+.navy {
+	position: absolute;
+	top: 0;
+	z-index: 1;
+	height: 100%;
+	width: 30px;
+	cursor: pointer;
+	opacity:0.5;
+}
+.prev-slide {
+	left: 0;
+	background: #dbdbdb url(bg/left-arrow.png) 11px 40% no-repeat;
+}
+.next-slide {
+	right: 0;
+	background: #dbdbdb url(bg/right-arrow.png) 13px 40% no-repeat;
+}
+.navy.disable {
+	background: #dbdbdb;
+}
+
+.auto {
+	width: 7px;
+	height: 11px;
+	cursor: pointer;
+	margin: 10px auto;
+}
+.play {
+	background: url(bg/play.png) center no-repeat;
+}
+.pause {
+	background: url(bg/pause.png) center no-repeat;
+}
